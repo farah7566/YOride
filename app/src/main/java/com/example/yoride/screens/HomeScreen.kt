@@ -1,5 +1,6 @@
 package com.example.yoride.screens
 
+import AppIcon
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -56,7 +57,6 @@ import com.example.yoride.ui.theme.DarkGray
 import com.example.yoride.ui.theme.Gray
 import com.example.yoride.ui.theme.YOrideTheme
 import com.example.yoride.ui.theme.Background
-import fingerfire.com.aluguecarro.common.AppIcon
 
 @Composable
 fun HomeScreen(navHostController: NavHostController) {
