@@ -52,6 +52,7 @@ import com.example.yoride.model.Car
 import com.example.yoride.navigation.BMW_SCREEN
 import com.example.yoride.navigation.DETAIL_SCREEN
 import com.example.yoride.navigation.PROFILE_SCREEN
+import com.example.yoride.navigation.TESLA_SCREEN
 import com.example.yoride.ui.theme.DarkGray
 import com.example.yoride.ui.theme.Gray
 import com.example.yoride.ui.theme.YOrideTheme
@@ -177,6 +178,23 @@ fun HomeScreen(navHostController: NavHostController) {
                             "800TND/day",
                             R.drawable.ford69
                         ),
+                        Car(
+                            id="7",
+                            "Tesla",
+                            "Tesla model X",
+                            4.5,
+                            "300TND",
+                            R.drawable.modelx
+                        ),
+
+                        Car(                            id="8",
+
+                            "Tesla",
+                            "Tesla model Y",
+                            4.8,
+                            "250TND",
+                            R.drawable.modely
+                        ),
                     )
 
                     LazyRow(modifier = Modifier.padding(vertical = 20.dp)) {
@@ -187,8 +205,10 @@ fun HomeScreen(navHostController: NavHostController) {
                                 modifier = Modifier
                                     .padding(end = 15.dp)
                                     .clickable { selectedIndex = index
-                                        if(menuItem == "BMW") {
-                                            navHostController.navigate(BMW_SCREEN)
+                                        if (menuItem == "BMW") {
+                                            navHostController.navigate(BMW_SCREEN);
+                                        } else if (menuItem == "Tesla") {
+                                            navHostController.navigate(TESLA_SCREEN); // Assuming TESLA_SCREEN is defined elsewhere
                                         }}
                             ) {
                                 Box(
